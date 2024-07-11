@@ -66,12 +66,12 @@ namespace DevelopmentChallenge.Data.Classes
 
         private static string ObtenerLinea(int cantidad, decimal area, decimal perimetro, string nombre, int idioma)
         {
+            var traductor = Traductor.Instancia;
+
             if (cantidad > 0)
             {
-                if (idioma == Traductor.Castellano)
-                    return $"{cantidad} {TraducirForma(nombre, cantidad, idioma)} | Area {area:#.##} | Perimetro {perimetro:#.##} <br/>";
 
-                return $"{cantidad} {TraducirForma(nombre, cantidad, idioma)} | Area {area:#.##} | Perimeter {perimetro:#.##} <br/>";
+                return $"{cantidad} {TraducirForma(nombre, cantidad, idioma)} | Area {area:#.##} | {traductor.Traduccion("Perimetro", idioma)} {perimetro:#.##} <br/>";
             }
 
             return string.Empty;
