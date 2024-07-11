@@ -70,7 +70,6 @@ namespace DevelopmentChallenge.Data.Classes
 
             if (cantidad > 0)
             {
-
                 return $"{cantidad} {TraducirForma(nombre, cantidad, idioma)} | Area {area:#.##} | {traductor.Traduccion("Perimetro", idioma)} {perimetro:#.##} <br/>";
             }
 
