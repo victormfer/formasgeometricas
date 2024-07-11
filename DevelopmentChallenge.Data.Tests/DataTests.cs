@@ -102,8 +102,6 @@ namespace DevelopmentChallenge.Data.Tests
 
             var resumen = FormaGeometrica.Imprimir(formas, Traductor.Italino);
 
-            Console.WriteLine(resumen);
-
             Assert.AreEqual(
                 "<h1>Rapporto sul modulo</h1>2 Rettangoli | Area 400 | Perimeter 120 <br/>1 Piazza | Area 25 | Perimeter 20 <br/>TOTAL:<br/>3 forme Perimetro 140 Area 425",
                 resumen);
